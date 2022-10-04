@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>使用方法 | Pai</title>
-  <meta name="keywords" content=" hexo ">
-  <meta name="description" content="使用方法 | Pai">
+  <title>Pai</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Pai">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="在安装ROS和其它很多的网站时，代理能方便许多，因此写了一个初步的教程。 在这个网站里，有着很详细的安装步骤。 v2rayA 防丢初步准备总结一下： 安装：1.安装 V2Ray 内核：v2rayA 提供的镜像脚本（推荐） 1curl -Ls https:&#x2F;&#x2F;mirrors.v2raya.org&#x2F;go.sh | sudo bash  安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd">
 <meta property="og:type" content="article">
@@ -259,34 +259,17 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-使用方法" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">使用方法</h1>
+        <article id="post-V2rayA在linux 下安装使用教程" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="bolg">bolg</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color5">hexo</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-08-12 10:15:15'>2022-08-12 08:45</time>
+            Created At : <time class="date" title='Updated At: 2022-10-04 14:10:07'>2022-10-04 14:13</time>
         
     </div>
     <div class="article-meta">
@@ -308,7 +291,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-text">写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0"><span class="toc-text">删除文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-text">文章中插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD"><span class="toc-text">博客备份</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E4%B8%8E%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%BB%BA%E7%AB%8B%E8%81%94%E7%B3%BB"><span class="toc-text">github 创建仓库并与本地仓库建立联系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">备份快捷键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-text">博客搭建</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%EF%BC%9A"><span class="toc-text">安装：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-V2Ray-%E5%86%85%E6%A0%B8%EF%BC%9A"><span class="toc-text">1.安装 V2Ray 内核：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%AE%89%E8%A3%85"><span class="toc-text">方法一：通过软件源安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-text">添加公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-V2RayA-%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="toc-text">添加 V2RayA 软件源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-V2RayA"><span class="toc-text">安装 V2RayA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-deb-%E5%8C%85"><span class="toc-text">方法二：手动安装 deb 包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%EF%BC%9A"><span class="toc-text">启动：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%90%AF%E5%8A%A8-v2rayA-x2F-%E8%AE%BE%E7%BD%AE-v2rayA-%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8"><span class="toc-text">1.启动 v2rayA&#x2F; 设置 v2rayA 自动启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%80%E5%A7%8B%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.开始设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E8%B4%A6%E5%8F%B7"><span class="toc-text">3.创建账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AF%BC%E5%85%A5%E8%8A%82%E7%82%B9"><span class="toc-text">4.导入节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%BF%9E%E6%8E%A5%E8%8A%82%E7%82%B9%E5%92%8C%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-text">5.连接节点和启动服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E8%8A%82%E7%82%B9"><span class="toc-text">连接节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-text">启动服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%EF%BC%9A"><span class="toc-text">代理设置：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-text">配置代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86"><span class="toc-text">1.透明代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86"><span class="toc-text">2.系统代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A3%E7%90%86"><span class="toc-text">3.浏览器代理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-linux%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BB%A3%E7%90%86"><span class="toc-text">4.linux客户端代理</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -324,16 +307,65 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p><code>hexo new post &quot;name&quot;</code><br><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">markdown使用教程</a></p>
-<h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>本地直接删除</p>
-<h2 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h2><p>使用相对路径<br><img src="/2022/08/12/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/image.png"><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1736563">插入教程</a></p>
-<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><h3 id="github-创建仓库并与本地仓库建立联系"><a href="#github-创建仓库并与本地仓库建立联系" class="headerlink" title="github 创建仓库并与本地仓库建立联系"></a>github 创建仓库并与本地仓库建立联系</h3><p>1.首先在项目目录下初始化本地仓库<br><code>git init</code><br>2.添加所有文件( . 表示所有)<br><code>git add .</code><br>3.提交所有文件到本地仓库<br><code>git commit -m &quot;备注信息&quot;</code><br>4.连接到远程仓库<br><code>git remote add origin 你的远程仓库地址</code><br>5.将项目推送到远程仓库<br><code>git push -u origin master</code></p>
-<h3 id="备份快捷键"><a href="#备份快捷键" class="headerlink" title="备份快捷键"></a>备份快捷键</h3><p>在任意目录右击，打开 git bash here ， 执行下面语句，注意:下面两行全部复制，一起执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;alias hs=&#x27;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#x27;  #启动本地服务</span><br><span class="line">alias hd=&#x27;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#x27;  #部署博客&quot;&gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc</span><br></pre></td></tr></table></figure>
+        <p>在安装ROS和其它很多的网站时，代理能方便许多，因此写了一个初步的教程。</p>
+<p>在这个网站里，有着很详细的安装步骤。</p>
+<p><a href="https://link.zhihu.com/?target=https://v2raya.org/">v2rayA</a></p>
+<p>防丢初步准备总结一下：</p>
+<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><h2 id="1-安装-V2Ray-内核："><a href="#1-安装-V2Ray-内核：" class="headerlink" title="1.安装 V2Ray 内核："></a>1.安装 V2Ray 内核：</h2><p><strong>v2rayA 提供的镜像脚本（推荐）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Ls https://mirrors.v2raya.org/go.sh | sudo bash</span><br></pre></td></tr></table></figure>
 
+<p><strong>安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd 服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray</span><br></pre></td></tr></table></figure>
 
-<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111614119">本博客搭建参考教程</a><br><a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">本博客hexo主题</a><br><a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">主题使用方法</a></p>
+<h3 id="方法一：通过软件源安装"><a href="#方法一：通过软件源安装" class="headerlink" title="方法一：通过软件源安装"></a>方法一：通过软件源安装</h3><h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https://apt.v2raya.mzz.pub/key/public-key.asc | sudo apt-key add -</span><br></pre></td></tr></table></figure>
 
+<h3 id="添加-V2RayA-软件源"><a href="#添加-V2RayA-软件源" class="headerlink" title="添加 V2RayA 软件源"></a>添加 V2RayA 软件源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https://apt.v2raya.mzz.pub/ v2raya main&quot; | sudo tee /etc/apt/sources.list.d/v2raya.list</span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-V2RayA"><a href="#安装-V2RayA" class="headerlink" title="安装 V2RayA"></a>安装 V2RayA</h3><h3 id="方法二：手动安装-deb-包"><a href="#方法二：手动安装-deb-包" class="headerlink" title="方法二：手动安装 deb 包"></a>方法二：手动安装 deb 包</h3><p><a href="https://link.zhihu.com/?target=https://github.com/v2rayA/v2rayA/releases">下载 deb 包</a></p>
+<p>后可以使用 Gdebi、QApt 等图形化工具来安装，也可以使用命令行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install /path/download/installer_debian_xxx_vxxx.deb ### 自行替换 deb 包所在的实际路径</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h2><h2 id="1-启动-v2rayA-x2F-设置-v2rayA-自动启动"><a href="#1-启动-v2rayA-x2F-设置-v2rayA-自动启动" class="headerlink" title="1.启动 v2rayA&#x2F; 设置 v2rayA 自动启动"></a>1.启动 v2rayA&#x2F; 设置 v2rayA 自动启动</h2><blockquote>
+<p>从 1.5 版开始将不再默认为用户启动 v2rayA 及设置开机自动。</p>
+</blockquote>
+<p><strong>启动 v2rayA</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start v2raya.service</span><br></pre></td></tr></table></figure>
+
+<p><strong>设置开机自动启动</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable v2raya.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-开始设置"><a href="#2-开始设置" class="headerlink" title="2.开始设置"></a>2.开始设置</h2><p>通过 2017 端口 如 <a href="https://link.zhihu.com/?target=http://localhost:2017/">http://localhost:2017</a>访问 UI 界面。</p>
+<p>（如果无法访问，请检查你的服务是否已经启动，<a href="https://link.zhihu.com/?target=https://github.com/v2rayA/v2rayA/issues/237">相关问题</a>）</p>
+<h2 id="3-创建账号"><a href="#3-创建账号" class="headerlink" title="3.创建账号"></a>3.创建账号</h2><p><img src="/../_resources/v2-e50d8d16f746ea596f3f157ca4e0b_a65d520723a74dc98.jpg"></p>
+<p>在第一次进入页面时，你需要创建一个管理员账号，请妥善保管你的用户名密码，如果遗忘，使用<code>sudo v2raya --reset-password</code>命令重置。</p>
+<h2 id="4-导入节点"><a href="#4-导入节点" class="headerlink" title="4.导入节点"></a><strong>4.导入节点</strong></h2><p><img src="/../_resources/v2-748385ba1e2960d44d51e80502d5e_9732ade20c1944d3a.jpg"></p>
+<p>以创建或导入的方式导入节点，导入支持节点链接、订阅链接、扫描二维码和批量导入等方式。</p>
+<h2 id="5-连接节点和启动服务"><a href="#5-连接节点和启动服务" class="headerlink" title="5.连接节点和启动服务"></a><strong>5.连接节点和启动服务</strong></h2><h3 id="连接节点"><a href="#连接节点" class="headerlink" title="连接节点"></a>连接节点</h3><p><img src="/../_resources/v2-14c6d4ee3dd29d78374f296afbedd_baf42fa9b4e74b2ea.jpg"></p>
+<p>导入成功后，节点将显示在 <code>SERVER</code> 或新的标签中。如图是导入了一个订阅后的界面。</p>
+<p><img src="/../_resources/v2-91fac87fa097a634f67b0bec2eac1_2b6310dcc01248dfa.jpg"></p>
+<p>切换到该标签页，选择一个或多个节点连接。这里不建议选择过多的节点，6 个以内为佳。</p>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p><img src="/../_resources/v2-990905d7a51d7a2a553feba1d5e9a_e1243bee7f4b4435b.jpg"></p>
+<p>在未启动服务时，连接的节点呈现柚红色。我们在左上角点击相应按钮启动服务。</p>
+<p><img src="/../_resources/v2-3c3e839830071779a65579afd0042_aa05120f8b8b4ee19.jpg"></p>
+<p>在启动服务后，所连接的节点呈现蓝色，左上角的图标也显示为蓝色的正在运行，代表服务启动成功</p>
+<h2 id="代理设置："><a href="#代理设置：" class="headerlink" title="代理设置："></a>代理设置：</h2><h3 id="配置代理"><a href="#配置代理" class="headerlink" title="配置代理"></a>配置代理</h3><p>由于默认情况下 v2rayA 会通过核心开放 20170(socks5), 20171(http), 20172(带分流规则的http) 端口。修改端口可参阅<a href="https://link.zhihu.com/?target=https://v2raya.org/docs/manual/address-port/">后端地址和入站端口设置</a> 一节。</p>
+<p>如果是需要为局域网中的其他机器提供代理，请在设置中打开“局域网共享”，并检查防火墙开放情况。这里记录三种方式使用代理。</p>
+<h3 id="1-透明代理"><a href="#1-透明代理" class="headerlink" title="1.透明代理"></a>1.透明代理</h3><p><img src="/../_resources/v2-01b4470eaac3b927397e58d109bec_818c7844a3e649f8b.jpg"></p>
+<p>这种方法是 v2rayA 推荐的方法。它相比于其他方法具有诸多优势，v2rayA 可以一键开启透明代理，为<strong>几乎所有程序</strong>提供代理服务。</p>
+<p>在设置中选择透明代理的分流方式，以及实现方式，然后保存即可。具体细节可参阅<a href="https://link.zhihu.com/?target=https://v2raya.org/docs/manual/transparent-proxy/">透明代理</a> 一节。</p>
+<p>注意，如需选择 GFWList，需要下载对应的规则库，请点击右上角的更新以完成下载。</p>
+<h3 id="2-系统代理"><a href="#2-系统代理" class="headerlink" title="2.系统代理"></a>2.系统代理</h3><p>系统代理可为<strong>主动支持代理的程序</strong>提供代理服务。在不同的桌面环境中设置的位置不尽相同，请通过搜索引擎自行搜索。</p>
+<h3 id="3-浏览器代理"><a href="#3-浏览器代理" class="headerlink" title="3.浏览器代理"></a>3.浏览器代理</h3><p>SwitchyOmega 等浏览器插件可为<strong>浏览器</strong>提供代理服务。</p>
+<p>在所使用的浏览器上安装插件</p>
+<p><img src="/../_resources/v2-1dae8e342775d8f26ca4fff259e8a_9936d7fa162d40cea.jpg"></p>
+<p>按照下图进行配置，并应用配置</p>
+<p><img src="/../_resources/v2-784b84e5cbee84525097367285899_9b50cb057bef49f49.jpg"></p>
+<p>在v2rayA右上角的设置中查看端口信息</p>
+<p><img src="/../_resources/v2-9bfbd08bbeee4e6b5d8f3d3090119_aa2cc44ecfe64fb3b.png"></p>
+<p><img src="/../_resources/v2-b422e3287271a93308e9489b43f0a_a7427a9d56b54dc7a.jpg"></p>
+<p>在浏览器代理软件中，设置代理方式</p>
+<p><img src="/../_resources/v2-9a81104a1cb1b5a0446a11b6ad7df_c9f470ad1b414e488.jpg"></p>
+<h2 id="4-linux客户端代理"><a href="#4-linux客户端代理" class="headerlink" title="4.linux客户端代理"></a><strong>4.linux客户端代理</strong></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export https_proxy=https://127.0.0.1:20171</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1069983344@qq.com </span>
     </div>
