@@ -8,28 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="在安装ROS和其它很多的网站时，代理能方便许多，因此写了一个初步的教程。 在这个网站里，有着很详细的安装步骤。 v2rayA 防丢初步准备总结一下： 安装：1.安装 V2Ray 内核：v2rayA 提供的镜像脚本（推荐） 1curl -Ls https:&#x2F;&#x2F;mirrors.v2raya.org&#x2F;go.sh | sudo bash  安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pai">
-<meta property="og:url" content="http://example.com/2022/10/04/V2rayA%E5%9C%A8linux%20%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="V2rayA在linux下安装使用教程">
+<meta property="og:url" content="http://example.com/2022/10/04/V2rayA%E5%9C%A8linux%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Pai">
 <meta property="og:description" content="在安装ROS和其它很多的网站时，代理能方便许多，因此写了一个初步的教程。 在这个网站里，有着很详细的安装步骤。 v2rayA 防丢初步准备总结一下： 安装：1.安装 V2Ray 内核：v2rayA 提供的镜像脚本（推荐） 1curl -Ls https:&#x2F;&#x2F;mirrors.v2raya.org&#x2F;go.sh | sudo bash  安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/_resources/v2-e50d8d16f746ea596f3f157ca4e0b_a65d520723a74dc98.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-748385ba1e2960d44d51e80502d5e_9732ade20c1944d3a.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-14c6d4ee3dd29d78374f296afbedd_baf42fa9b4e74b2ea.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-91fac87fa097a634f67b0bec2eac1_2b6310dcc01248dfa.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-990905d7a51d7a2a553feba1d5e9a_e1243bee7f4b4435b.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-3c3e839830071779a65579afd0042_aa05120f8b8b4ee19.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-01b4470eaac3b927397e58d109bec_818c7844a3e649f8b.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-1dae8e342775d8f26ca4fff259e8a_9936d7fa162d40cea.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-784b84e5cbee84525097367285899_9b50cb057bef49f49.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-9bfbd08bbeee4e6b5d8f3d3090119_aa2cc44ecfe64fb3b.png">
-<meta property="og:image" content="http://example.com/_resources/v2-b422e3287271a93308e9489b43f0a_a7427a9d56b54dc7a.jpg">
-<meta property="og:image" content="http://example.com/_resources/v2-9a81104a1cb1b5a0446a11b6ad7df_c9f470ad1b414e488.jpg">
-<meta property="article:published_time" content="2022-10-04T06:13:36.522Z">
-<meta property="article:modified_time" content="2022-10-04T06:10:07.163Z">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-e50d8d16f746ea596f3f157ca4e0b_a65d520723a74dc98.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-748385ba1e2960d44d51e80502d5e_9732ade20c1944d3a.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-14c6d4ee3dd29d78374f296afbedd_baf42fa9b4e74b2ea.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-91fac87fa097a634f67b0bec2eac1_2b6310dcc01248dfa.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-990905d7a51d7a2a553feba1d5e9a_e1243bee7f4b4435b.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-3c3e839830071779a65579afd0042_aa05120f8b8b4ee19.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-01b4470eaac3b927397e58d109bec_818c7844a3e649f8b.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-1dae8e342775d8f26ca4fff259e8a_9936d7fa162d40cea.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-784b84e5cbee84525097367285899_9b50cb057bef49f49.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-9bfbd08bbeee4e6b5d8f3d3090119_aa2cc44ecfe64fb3b.png">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-b422e3287271a93308e9489b43f0a_a7427a9d56b54dc7a.jpg">
+<meta property="og:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-9a81104a1cb1b5a0446a11b6ad7df_c9f470ad1b414e488.jpg">
+<meta property="article:published_time" content="2022-10-04T06:25:10.000Z">
+<meta property="article:modified_time" content="2022-10-04T06:25:59.433Z">
 <meta property="article:author" content="Pai">
+<meta property="article:tag" content="V2rayA">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/_resources/v2-e50d8d16f746ea596f3f157ca4e0b_a65d520723a74dc98.jpg">
+<meta name="twitter:image" content="http://example.com/AAAAAAAAAAAAAAAAAAAAA/_resources/v2-e50d8d16f746ea596f3f157ca4e0b_a65d520723a74dc98.jpg">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -216,6 +217,10 @@
                 <i class="iconfont icon-tag"></i><a>hexo</a>
             </li>
         
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>V2rayA</a>
+            </li>
+        
     </div>
 
 </div>
@@ -225,11 +230,11 @@
         
         
         <a  class="All "
-           href="/2022/10/04/V2rayA%E5%9C%A8linux%20%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"
-           data-tag=""
+           href="/2022/10/04/V2rayA%E5%9C%A8linux%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"
+           data-tag="V2rayA"
            data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2022-10-04 14:13:36">2022/10/04</span>
+            <span class="post-title" title="V2rayA在linux下安装使用教程">V2rayA在linux下安装使用教程</span>
+            <span class="post-date" title="2022-10-04 14:25:10">2022/10/04</span>
         </a>
         
         
