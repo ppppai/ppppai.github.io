@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>使用方法 | Pai</title>
-  <meta name="keywords" content=" hexo ">
-  <meta name="description" content="使用方法 | Pai">
+  <title>github与git连接 | Pai</title>
+  <meta name="keywords" content=" ssh ">
+  <meta name="description" content="github与git连接 | Pai">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Github添加公钥第一步ssh-keygen -t rsa -C &quot;注册GitHub使用的邮箱@email.com&quot;  一路按Enter 第二步：复制公钥vim .ssh&#x2F;id_rsa.pub 或 cat .ssh&#x2F;id_rsa.pub 或者直接打开.ssh文件夹里的id_rsa.pub文件复制 第三步：到Github上添加公钥最后一步：检查是否添加成功执行命令: ssh -">
 <meta property="og:type" content="article">
@@ -264,34 +264,26 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-使用方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-github与git连接" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">使用方法</h1>
+        <h1 class="article-title">github与git连接</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="bolg">bolg</a>
-            
-        </span>
-        
         
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">hexo</a>
+            <a class="color4">ssh</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-08-12 10:15:15'>2022-08-12 08:45</time>
+            Created At : <time class="date" title='Updated At: 2022-10-05 15:14:48'>2022-10-05 15:02</time>
         
     </div>
     <div class="article-meta">
@@ -313,7 +305,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-text">写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0"><span class="toc-text">删除文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-text">文章中插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD"><span class="toc-text">博客备份</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E4%B8%8E%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%BB%BA%E7%AB%8B%E8%81%94%E7%B3%BB"><span class="toc-text">github 创建仓库并与本地仓库建立联系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">备份快捷键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="toc-text">博客搭建</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Github%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-text">Github添加公钥</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%A4%8D%E5%88%B6%E5%85%AC%E9%92%A5"><span class="toc-text">第二步：复制公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%88%B0Github%E4%B8%8A%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-text">第三步：到Github上添加公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F"><span class="toc-text">最后一步：检查是否添加成功</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="toc-text">注意：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86%E8%BD%AF%E4%BB%B6"><span class="toc-text">关闭全局代理软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9F%E6%9C%89%E5%8F%AF%E8%83%BD%E6%98%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A2%AF%E5%AD%90%E5%B0%81%E7%A6%81%E4%BA%86Github%E7%AB%AF%E5%8F%A322%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="toc-text">也有可能是使用的梯子封禁了Github端口22的连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%EF%BC%9A"><span class="toc-text">解决：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%EF%BC%9A"><span class="toc-text">验证：</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -329,15 +321,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p><code>hexo new post &quot;name&quot;</code><br><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">markdown使用教程</a></p>
-<h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>本地直接删除</p>
-<h2 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h2><p>使用相对路径<br><img src="/2022/08/12/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/image.png"><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1736563">插入教程</a></p>
-<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><h3 id="github-创建仓库并与本地仓库建立联系"><a href="#github-创建仓库并与本地仓库建立联系" class="headerlink" title="github 创建仓库并与本地仓库建立联系"></a>github 创建仓库并与本地仓库建立联系</h3><p>1.首先在项目目录下初始化本地仓库<br><code>git init</code><br>2.添加所有文件( . 表示所有)<br><code>git add .</code><br>3.提交所有文件到本地仓库<br><code>git commit -m &quot;备注信息&quot;</code><br>4.连接到远程仓库<br><code>git remote add origin 你的远程仓库地址</code><br>5.将项目推送到远程仓库<br><code>git push -u origin master</code></p>
-<h3 id="备份快捷键"><a href="#备份快捷键" class="headerlink" title="备份快捷键"></a>备份快捷键</h3><p>在任意目录右击，打开 git bash here ， 执行下面语句，注意:下面两行全部复制，一起执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;alias hs=&#x27;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#x27;  #启动本地服务</span><br><span class="line">alias hd=&#x27;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#x27;  #部署博客&quot;&gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc</span><br></pre></td></tr></table></figure>
+        <h1 id="Github添加公钥"><a href="#Github添加公钥" class="headerlink" title="Github添加公钥"></a>Github添加公钥</h1><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p><code>ssh-keygen -t rsa -C &quot;注册GitHub使用的邮箱@email.com&quot; </code></p>
+<p>一路按Enter</p>
+<h2 id="第二步：复制公钥"><a href="#第二步：复制公钥" class="headerlink" title="第二步：复制公钥"></a>第二步：复制公钥</h2><p><code>vim .ssh/id_rsa.pub 或 cat .ssh/id_rsa.pub</code></p>
+<p>或者直接打开<code>.ssh</code>文件夹里的<code>id_rsa.pub</code>文件复制</p>
+<h2 id="第三步：到Github上添加公钥"><a href="#第三步：到Github上添加公钥" class="headerlink" title="第三步：到Github上添加公钥"></a>第三步：到Github上添加公钥</h2><h2 id="最后一步：检查是否添加成功"><a href="#最后一步：检查是否添加成功" class="headerlink" title="最后一步：检查是否添加成功"></a>最后一步：检查是否添加成功</h2><p>执行命令:</p>
+<p><code>ssh -T git@github.com</code></p>
+<p>得到下面所示时，表示调加成功</p>
+<p><code>Hi ppppai! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
+<hr>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>检查时会提示报错<code>Connection closed by remote host</code>，一般是网络问题，需要：</p>
+<h3 id="关闭全局代理软件"><a href="#关闭全局代理软件" class="headerlink" title="关闭全局代理软件"></a>关闭全局代理软件</h3><p>v2rayA只有全局代理，所以使用的时候需要关闭</p>
+<h3 id="也有可能是使用的梯子封禁了Github端口22的连接"><a href="#也有可能是使用的梯子封禁了Github端口22的连接" class="headerlink" title="也有可能是使用的梯子封禁了Github端口22的连接"></a>也有可能是使用的梯子封禁了Github端口22的连接</h3><h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>将 Github 的连接端口从 22 改为 443 即可。修改 <code>~/.ssh/config</code> ，添加如下段落即可</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    HostName ssh.github.com</span><br><span class="line">    User git</span><br><span class="line">    Port 443</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证："><a href="#验证：" class="headerlink" title="验证："></a>验证：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">Hi xxx! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
 
 
-<h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111614119">本博客搭建参考教程</a><br><a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">本博客hexo主题</a><br><a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">主题使用方法</a></p>
+
+
+
+
+
+
+
+
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1069983344@qq.com </span>
