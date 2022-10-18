@@ -6,12 +6,12 @@
   <meta name="keywords" content=" PX4 , ROS ">
   <meta name="description" content="PX4+ROS开发 | Pai">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454">
+<meta name="description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): &#x2F;**  * @file offb_node.cpp  * @brief Offboard control example node, written with M">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PX4+ROS开发">
 <meta property="og:url" content="http://example.com/2022/10/17/PX4-ROS%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="Pai">
-<meta property="og:description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454">
+<meta property="og:description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): &#x2F;**  * @file offb_node.cpp  * @brief Offboard control example node, written with M">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-17T13:34:55.000Z">
 <meta property="article:modified_time" content="2022-10-17T13:57:26.615Z">
@@ -431,24 +431,114 @@
 <h2 id="offboard控制"><a href="#offboard控制" class="headerlink" title="offboard控制"></a>offboard控制</h2><h3 id="1-创建工作空间"><a href="#1-创建工作空间" class="headerlink" title="1.创建工作空间"></a>1.创建工作空间</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42237429/article/details/90238000">参考</a></p>
 <h3 id="2-创建文件"><a href="#2-创建文件" class="headerlink" title="2.创建文件"></a>2.创建文件</h3><p>然后定位到目录<code>~/catkin_ws/src/offboard_pkg/src/</code>，新建一个文件<code>offboard_node.cpp</code>。</p>
 <p>将代码复制进去(官方示例):</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @file offb_node.cpp</span><br><span class="line"> * @brief Offboard control example node, written with MAVROS version 0.19.x, PX4 Pro Flight</span><br><span class="line"> * Stack and tested in Gazebo SITL</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">#include &lt;ros/ros.h&gt;</span><br><span class="line">#include &lt;geometry_msgs/PoseStamped.h&gt;</span><br><span class="line">#include &lt;mavros_msgs/CommandBool.h&gt;</span><br><span class="line">#include &lt;mavros_msgs/SetMode.h&gt;</span><br><span class="line">#include &lt;mavros_msgs/State.h&gt;</span><br><span class="line"></span><br><span class="line">mavros_msgs::State current_state;</span><br><span class="line">void state_cb(const mavros_msgs::State::ConstPtr&amp; msg)&#123;</span><br><span class="line">    current_state = *msg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(int argc, char **argv)</span><br><span class="line">&#123;</span><br><span class="line">    ros::init(argc, argv, &quot;offb_node&quot;);</span><br><span class="line">    ros::NodeHandle nh;</span><br><span class="line"></span><br><span class="line">    ros::Subscriber state_sub = nh.subscribe&lt;mavros_msgs::State&gt;</span><br><span class="line">            (&quot;mavros/state&quot;, 10, state_cb);</span><br><span class="line">    ros::Publisher local_pos_pub = nh.advertise&lt;geometry_msgs::PoseStamped&gt;</span><br><span class="line">            (&quot;mavros/setpoint_position/local&quot;, 10);</span><br><span class="line">    ros::ServiceClient arming_client = nh.serviceClient&lt;mavros_msgs::CommandBool&gt;</span><br><span class="line">            (&quot;mavros/cmd/arming&quot;);</span><br><span class="line">    ros::ServiceClient set_mode_client = nh.serviceClient&lt;mavros_msgs::SetMode&gt;</span><br><span class="line">            (&quot;mavros/set_mode&quot;);</span><br><span class="line"></span><br><span class="line">    //the setpoint publishing rate MUST be faster than 2Hz</span><br><span class="line">    ros::Rate rate(20.0);</span><br><span class="line"></span><br><span class="line">    // wait for FCU connection</span><br><span class="line">    while(ros::ok() &amp;&amp; !current_state.connected)&#123;</span><br><span class="line">        ros::spinOnce();</span><br><span class="line">        rate.sleep();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    geometry_msgs::PoseStamped pose;</span><br><span class="line">    pose.pose.position.x = 0;</span><br><span class="line">    pose.pose.position.y = 0;</span><br><span class="line">    pose.pose.position.z = 2;</span><br><span class="line"></span><br><span class="line">    //send a few setpoints before starting</span><br><span class="line">    for(int i = 100; ros::ok() &amp;&amp; i &gt; 0; --i)&#123;</span><br><span class="line">        local_pos_pub.publish(pose);</span><br><span class="line">        ros::spinOnce();</span><br><span class="line">        rate.sleep();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    mavros_msgs::SetMode offb_set_mode;</span><br><span class="line">    offb_set_mode.request.custom_mode = &quot;OFFBOARD&quot;;</span><br><span class="line"></span><br><span class="line">    mavros_msgs::CommandBool arm_cmd;</span><br><span class="line">    arm_cmd.request.value = true;</span><br><span class="line"></span><br><span class="line">    ros::Time last_request = ros::Time::now();</span><br><span class="line"></span><br><span class="line">    while(ros::ok())&#123;</span><br><span class="line">        if( current_state.mode != &quot;OFFBOARD&quot; &amp;&amp;</span><br><span class="line">            (ros::Time::now() - last_request &gt; ros::Duration(5.0)))&#123;</span><br><span class="line">            if( set_mode_client.call(offb_set_mode) &amp;&amp;</span><br><span class="line">                offb_set_mode.response.mode_sent)&#123;</span><br><span class="line">                ROS_INFO(&quot;Offboard enabled&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            last_request = ros::Time::now();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            if( !current_state.armed &amp;&amp;</span><br><span class="line">                (ros::Time::now() - last_request &gt; ros::Duration(5.0)))&#123;</span><br><span class="line">                if( arming_client.call(arm_cmd) &amp;&amp;</span><br><span class="line">                    arm_cmd.response.success)&#123;</span><br><span class="line">                    ROS_INFO(&quot;Vehicle armed&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">                last_request = ros::Time::now();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        local_pos_pub.publish(pose);</span><br><span class="line"></span><br><span class="line">        ros::spinOnce();</span><br><span class="line">        rate.sleep();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code>/**
+ * @file offb_node.cpp
+ * @brief Offboard control example node, written with MAVROS version 0.19.x, PX4 Pro Flight
+ * Stack and tested in Gazebo SITL
+ */
 
+#include &lt;ros/ros.h&gt;
+#include &lt;geometry_msgs/PoseStamped.h&gt;
+#include &lt;mavros_msgs/CommandBool.h&gt;
+#include &lt;mavros_msgs/SetMode.h&gt;
+#include &lt;mavros_msgs/State.h&gt;
+
+mavros_msgs::State current_state;
+void state_cb(const mavros_msgs::State::ConstPtr&amp; msg)&#123;
+    current_state = *msg;
+&#125;
+
+int main(int argc, char **argv)
+&#123;
+    ros::init(argc, argv, &quot;offb_node&quot;);
+    ros::NodeHandle nh;
+
+    ros::Subscriber state_sub = nh.subscribe&lt;mavros_msgs::State&gt;
+            (&quot;mavros/state&quot;, 10, state_cb);
+    ros::Publisher local_pos_pub = nh.advertise&lt;geometry_msgs::PoseStamped&gt;
+            (&quot;mavros/setpoint_position/local&quot;, 10);
+    ros::ServiceClient arming_client = nh.serviceClient&lt;mavros_msgs::CommandBool&gt;
+            (&quot;mavros/cmd/arming&quot;);
+    ros::ServiceClient set_mode_client = nh.serviceClient&lt;mavros_msgs::SetMode&gt;
+            (&quot;mavros/set_mode&quot;);
+
+    //the setpoint publishing rate MUST be faster than 2Hz
+    ros::Rate rate(20.0);
+
+    // wait for FCU connection
+    while(ros::ok() &amp;&amp; !current_state.connected)&#123;
+        ros::spinOnce();
+        rate.sleep();
+    &#125;
+
+    geometry_msgs::PoseStamped pose;
+    pose.pose.position.x = 0;
+    pose.pose.position.y = 0;
+    pose.pose.position.z = 2;
+
+    //send a few setpoints before starting
+    for(int i = 100; ros::ok() &amp;&amp; i &gt; 0; --i)&#123;
+        local_pos_pub.publish(pose);
+        ros::spinOnce();
+        rate.sleep();
+    &#125;
+
+    mavros_msgs::SetMode offb_set_mode;
+    offb_set_mode.request.custom_mode = &quot;OFFBOARD&quot;;
+
+    mavros_msgs::CommandBool arm_cmd;
+    arm_cmd.request.value = true;
+
+    ros::Time last_request = ros::Time::now();
+
+    while(ros::ok())&#123;
+        if( current_state.mode != &quot;OFFBOARD&quot; &amp;&amp;
+            (ros::Time::now() - last_request &gt; ros::Duration(5.0)))&#123;
+            if( set_mode_client.call(offb_set_mode) &amp;&amp;
+                offb_set_mode.response.mode_sent)&#123;
+                ROS_INFO(&quot;Offboard enabled&quot;);
+            &#125;
+            last_request = ros::Time::now();
+        &#125; else &#123;
+            if( !current_state.armed &amp;&amp;
+                (ros::Time::now() - last_request &gt; ros::Duration(5.0)))&#123;
+                if( arming_client.call(arm_cmd) &amp;&amp;
+                    arm_cmd.response.success)&#123;
+                    ROS_INFO(&quot;Vehicle armed&quot;);
+                &#125;
+                last_request = ros::Time::now();
+            &#125;
+        &#125;
+
+        local_pos_pub.publish(pose);
+
+        ros::spinOnce();
+        rate.sleep();
+    &#125;
+
+    return 0;
+&#125;
+</code></pre>
 <p>然后打开目录<code>~/catkin_ws/src/offboard_pkg/</code>下的<code>CMakeLists.txt</code>添加下面的两行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add_executable(offboard_node src/offboard_node.cpp)</span><br><span class="line">target_link_libraries(offboard_node $&#123;catkin_LIBRARIES&#125;)</span><br></pre></td></tr></table></figure>
-
+<pre><code>add_executable(offboard_node src/offboard_node.cpp)
+target_link_libraries(offboard_node $&#123;catkin_LIBRARIES&#125;)
+</code></pre>
 <p>然后到<code>catkin_ws</code>下，运行命令</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">catkin_make</span><br><span class="line"><span class="comment">//博客原文写的是 catkin build</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="c++">catkin_make
+//博客原文写的是 catkin build
+</code></pre>
 <h3 id="3-运行仿真"><a href="#3-运行仿真" class="headerlink" title="3.运行仿真"></a>3.运行仿真</h3><p>等待编译完成后，如果你要在<code>gazebo</code>中仿真，在 PX4 中运行命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make px4_sitl gazebo_iris</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">make px4_sitl gazebo_iris
+</code></pre>
 <p>打开<code>QGroundControl</code>。</p>
 <p>然后在终端下运行命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">roslaunch mavros px4.launch fcu_url:=<span class="string">&quot;udp://:14540@127.0.0.1:14557&quot;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">roslaunch mavros px4.launch fcu_url:=&quot;udp://:14540@127.0.0.1:14557&quot;
+</code></pre>
 <p>启动<code>PX4</code>与<code>Mavros</code>之间的连接，然后在<code>catkin_ws</code>运行命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">catkin_make</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">rosrun offboard_pkg offboard_node</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">catkin_make
+source ~/.bashrc
+rosrun offboard_pkg offboard_node
+</code></pre>
 <p>然后进入<code>gazebo</code>中进行观察。</p>
 
       

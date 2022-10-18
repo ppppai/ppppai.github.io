@@ -6,12 +6,12 @@
   <meta name="keywords" content=" hexo ">
   <meta name="description" content="使用方法 | Pai">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454">
+<meta name="description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): &#x2F;**  * @file offb_node.cpp  * @brief Offboard control example node, written with M">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PX4+ROS开发">
 <meta property="og:url" content="http://example.com/2022/10/17/PX4-ROS%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="Pai">
-<meta property="og:description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454">
+<meta property="og:description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): &#x2F;**  * @file offb_node.cpp  * @brief Offboard control example node, written with M">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-17T13:34:55.000Z">
 <meta property="article:modified_time" content="2022-10-17T13:57:26.615Z">
@@ -429,9 +429,9 @@
 <h2 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h2><p>使用相对路径<br><img src="/2022/08/12/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/image.png"><br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1736563">插入教程</a></p>
 <h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><h3 id="github-创建仓库并与本地仓库建立联系"><a href="#github-创建仓库并与本地仓库建立联系" class="headerlink" title="github 创建仓库并与本地仓库建立联系"></a>github 创建仓库并与本地仓库建立联系</h3><p>1.首先在项目目录下初始化本地仓库<br><code>git init</code><br>2.添加所有文件( . 表示所有)<br><code>git add .</code><br>3.提交所有文件到本地仓库<br><code>git commit -m &quot;备注信息&quot;</code><br>4.连接到远程仓库<br><code>git remote add origin 你的远程仓库地址</code><br>5.将项目推送到远程仓库<br><code>git push -u origin master</code></p>
 <h3 id="备份快捷键"><a href="#备份快捷键" class="headerlink" title="备份快捷键"></a>备份快捷键</h3><p>在任意目录右击，打开 git bash here ， 执行下面语句，注意:下面两行全部复制，一起执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;alias hs=&#x27;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#x27;  #启动本地服务</span><br><span class="line">alias hd=&#x27;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#x27;  #部署博客&quot;&gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-
+<pre><code>echo &quot;alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;  #启动本地服务
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#39;  #部署博客&quot;&gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
+</code></pre>
 <h2 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111614119">本博客搭建参考教程</a><br><a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">本博客hexo主题</a><br><a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">主题使用方法</a></p>
 
       

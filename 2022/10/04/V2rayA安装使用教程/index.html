@@ -6,12 +6,12 @@
   <meta name="keywords" content=" V2rayA ">
   <meta name="description" content="V2rayA安装使用教程 | Pai">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454">
+<meta name="description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): &#x2F;**  * @file offb_node.cpp  * @brief Offboard control example node, written with M">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PX4+ROS开发">
 <meta property="og:url" content="http://example.com/2022/10/17/PX4-ROS%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="Pai">
-<meta property="og:description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): 1234567891011121314151617181920212223242526272829303132333435363738394041424344454">
+<meta property="og:description" content="参考博客 视频教程 offboard控制1.创建工作空间参考 2.创建文件然后定位到目录~&#x2F;catkin_ws&#x2F;src&#x2F;offboard_pkg&#x2F;src&#x2F;，新建一个文件offboard_node.cpp。 将代码复制进去(官方示例): &#x2F;**  * @file offb_node.cpp  * @brief Offboard control example node, written with M">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-17T13:34:55.000Z">
 <meta property="article:modified_time" content="2022-10-17T13:57:26.615Z">
@@ -422,30 +422,31 @@
 <p><a href="https://link.zhihu.com/?target=https://v2raya.org/">v2rayA</a></p>
 <p>防丢初步准备总结一下：</p>
 <h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><h2 id="1-安装-V2Ray-内核："><a href="#1-安装-V2Ray-内核：" class="headerlink" title="1.安装 V2Ray 内核："></a>1.安装 V2Ray 内核：</h2><p><strong>v2rayA 提供的镜像脚本（推荐）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -Ls https://mirrors.v2raya.org/go.sh | sudo bash</span><br></pre></td></tr></table></figure>
-
+<pre><code>curl -Ls https://mirrors.v2raya.org/go.sh | sudo bash
+</code></pre>
 <p><strong>安装后可以关掉服务，因为 v2rayA 不依赖于该 systemd 服务</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray</span><br></pre></td></tr></table></figure>
-
-<h3 id="方法一：通过软件源安装"><a href="#方法一：通过软件源安装" class="headerlink" title="方法一：通过软件源安装"></a>方法一：通过软件源安装</h3><h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https://apt.v2raya.mzz.pub/key/public-key.asc | sudo apt-key add -</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加-V2RayA-软件源"><a href="#添加-V2RayA-软件源" class="headerlink" title="添加 V2RayA 软件源"></a>添加 V2RayA 软件源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https://apt.v2raya.mzz.pub/ v2raya main&quot; | sudo tee /etc/apt/sources.list.d/v2raya.list</span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装-V2RayA"><a href="#安装-V2RayA" class="headerlink" title="安装 V2RayA"></a>安装 V2RayA</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install v2raya</span><br></pre></td></tr></table></figure>
-
+<pre><code>sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray
+</code></pre>
+<h3 id="方法一：通过软件源安装"><a href="#方法一：通过软件源安装" class="headerlink" title="方法一：通过软件源安装"></a>方法一：通过软件源安装</h3><h3 id="添加公钥"><a href="#添加公钥" class="headerlink" title="添加公钥"></a>添加公钥</h3><pre><code>wget -qO - https://apt.v2raya.mzz.pub/key/public-key.asc | sudo apt-key add -
+</code></pre>
+<h3 id="添加-V2RayA-软件源"><a href="#添加-V2RayA-软件源" class="headerlink" title="添加 V2RayA 软件源"></a>添加 V2RayA 软件源</h3><pre><code>echo &quot;deb https://apt.v2raya.mzz.pub/ v2raya main&quot; | sudo tee /etc/apt/sources.list.d/v2raya.list
+sudo apt update
+</code></pre>
+<h3 id="安装-V2RayA"><a href="#安装-V2RayA" class="headerlink" title="安装 V2RayA"></a>安装 V2RayA</h3><pre><code>sudo apt install v2raya
+</code></pre>
 <h3 id="方法二：手动安装-deb-包"><a href="#方法二：手动安装-deb-包" class="headerlink" title="方法二：手动安装 deb 包"></a>方法二：手动安装 deb 包</h3><p><a href="https://link.zhihu.com/?target=https://github.com/v2rayA/v2rayA/releases">下载 deb 包</a></p>
 <p>后可以使用 Gdebi、QApt 等图形化工具来安装，也可以使用命令行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install /path/download/installer_debian_xxx_vxxx.deb ### 自行替换 deb 包所在的实际路径</span><br></pre></td></tr></table></figure>
-
+<pre><code>sudo apt install /path/download/installer_debian_xxx_vxxx.deb ### 自行替换 deb 包所在的实际路径
+</code></pre>
 <h2 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h2><h2 id="1-启动-v2rayA-x2F-设置-v2rayA-自动启动"><a href="#1-启动-v2rayA-x2F-设置-v2rayA-自动启动" class="headerlink" title="1.启动 v2rayA&#x2F; 设置 v2rayA 自动启动"></a>1.启动 v2rayA&#x2F; 设置 v2rayA 自动启动</h2><blockquote>
 <p>从 1.5 版开始将不再默认为用户启动 v2rayA 及设置开机自动。</p>
 </blockquote>
 <p><strong>启动 v2rayA</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start v2raya.service</span><br></pre></td></tr></table></figure>
-
+<pre><code>sudo systemctl start v2raya.service
+</code></pre>
 <p><strong>设置开机自动启动</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable v2raya.service</span><br></pre></td></tr></table></figure>
-
+<pre><code>sudo systemctl enable v2raya.service
+</code></pre>
 <h2 id="2-开始设置"><a href="#2-开始设置" class="headerlink" title="2.开始设置"></a>2.开始设置</h2><p>通过 2017 端口 如 <a href="https://link.zhihu.com/?target=http://localhost:2017/">http://localhost:2017</a>访问 UI 界面。</p>
 <p>（如果无法访问，请检查你的服务是否已经启动，<a href="https://link.zhihu.com/?target=https://github.com/v2rayA/v2rayA/issues/237">相关问题</a>）</p>
 <h2 id="3-创建账号"><a href="#3-创建账号" class="headerlink" title="3.创建账号"></a>3.创建账号</h2><p><img src="/../../../AAAAAAAAAAAAAAAAAAAAA/_resources/v2-e50d8d16f746ea596f3f157ca4e0b_a65d520723a74dc98.jpg"></p>
@@ -477,7 +478,9 @@
 <p><img src="/../../../AAAAAAAAAAAAAAAAAAAAA/_resources/v2-b422e3287271a93308e9489b43f0a_a7427a9d56b54dc7a.jpg"></p>
 <p>在浏览器代理软件中，设置代理方式</p>
 <p><img src="/../../../AAAAAAAAAAAAAAAAAAAAA/_resources/v2-9a81104a1cb1b5a0446a11b6ad7df_c9f470ad1b414e488.jpg"></p>
-<h2 id="4-linux客户端代理"><a href="#4-linux客户端代理" class="headerlink" title="4.linux客户端代理"></a><strong>4.linux客户端代理</strong></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export https_proxy=https://127.0.0.1:20171</span><br></pre></td></tr></table></figure>
+<h2 id="4-linux客户端代理"><a href="#4-linux客户端代理" class="headerlink" title="4.linux客户端代理"></a><strong>4.linux客户端代理</strong></h2><pre><code>export https_proxy=https://127.0.0.1:20171
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1069983344@qq.com </span>
     </div>
