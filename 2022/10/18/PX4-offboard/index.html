@@ -410,7 +410,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-10-19 14:25:01'>2022-10-18 15:39</time>
+            Created At : <time class="date" title='Updated At: 2022-10-19 14:27:00'>2022-10-18 15:39</time>
         
     </div>
     <div class="article-meta">
@@ -570,7 +570,9 @@ rosrun offboard_pkg offboard_node
 <p>然后进入<code>gazebo</code>中进行观察。</p>
 <h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><h3 id="1-创建空间"><a href="#1-创建空间" class="headerlink" title="1.创建空间"></a>1.创建空间</h3><p>创建空间时若使用<code>catkin build</code>则在之后编译文件时也使用<code>catkin build</code></p>
 <p>创建空间时若使用<code>catkin_make</code>则在之后编译文件时也使用<code>catkin_make</code></p>
-<h3 id="2-无人机仿真报错问题"><a href="#2-无人机仿真报错问题" class="headerlink" title="2.无人机仿真报错问题"></a>2.无人机仿真报错问题</h3><p>需要使用px4固件版本为 v1.10</p>
+<h3 id="2-无人机仿真报错问题"><a href="#2-无人机仿真报错问题" class="headerlink" title="2.无人机仿真报错问题"></a>2.无人机仿真报错问题</h3><p>编译时报错<code>WARN  [mavlink] SET_POSITION_TARGET_LOCAL_NED force not supported	</code></p>
+<p>解决方法：</p>
+<p>需要使用px4固件版本为 v1.10</p>
 <p>更换固件版本方法：</p>
 <ol>
 <li><code>cd Firmware</code></li>
