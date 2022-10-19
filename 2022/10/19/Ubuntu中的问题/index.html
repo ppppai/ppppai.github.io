@@ -6,15 +6,15 @@
   <meta name="keywords" content=" Ubuntu , Python ">
   <meta name="description" content="Ubuntu中的问题 | Pai">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Ubuntu 升级 python 版本PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功参考 Ubuntu 默认安装了python2.7 输入命令python，可以查看当前python版本 Ctrl+D退出，pyhton命令行 输入以下命令，升级python sudo add-apt-repository ppa:jonathonf&#x2F;python-3.6 sudo apt-g">
+<meta name="description" content="Ubuntu 升级 python 版本参考 Ubuntu 默认安装了python2.7 输入命令python，可以查看当前python版本 Ctrl+D退出，pyhton命令行 输入以下命令，升级python sudo add-apt-repository ppa:jonathonf&#x2F;python-3.6 sudo apt-get update sudo apt-get install pytho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu中的问题">
 <meta property="og:url" content="http://example.com/2022/10/19/Ubuntu%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Pai">
-<meta property="og:description" content="Ubuntu 升级 python 版本PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功参考 Ubuntu 默认安装了python2.7 输入命令python，可以查看当前python版本 Ctrl+D退出，pyhton命令行 输入以下命令，升级python sudo add-apt-repository ppa:jonathonf&#x2F;python-3.6 sudo apt-g">
+<meta property="og:description" content="Ubuntu 升级 python 版本参考 Ubuntu 默认安装了python2.7 输入命令python，可以查看当前python版本 Ctrl+D退出，pyhton命令行 输入以下命令，升级python sudo add-apt-repository ppa:jonathonf&#x2F;python-3.6 sudo apt-get update sudo apt-get install pytho">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-19T05:52:28.000Z">
-<meta property="article:modified_time" content="2022-10-19T06:10:30.845Z">
+<meta property="article:modified_time" content="2022-10-19T06:19:51.536Z">
 <meta property="article:author" content="Pai">
 <meta property="article:tag" content="Ubuntu">
 <meta property="article:tag" content="Python">
@@ -410,7 +410,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-10-19 14:10:30'>2022-10-19 13:52</time>
+            Created At : <time class="date" title='Updated At: 2022-10-19 14:19:51'>2022-10-19 13:52</time>
         
     </div>
     <div class="article-meta">
@@ -432,7 +432,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-%E5%8D%87%E7%BA%A7-python-%E7%89%88%E6%9C%AC"><span class="toc-text">Ubuntu 升级 python 版本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PX4-v1-10-0-%E7%89%88%E6%9C%AC%E5%9C%A8%E7%BC%96%E8%AF%91%E6%97%B6%E9%9C%80%E8%A6%81%E5%8D%87%E7%BA%A7python%E7%89%88%E6%9C%AC%E6%89%8D%E8%83%BD%E7%BC%96%E8%AF%91%E6%88%90%E5%8A%9F"><span class="toc-text">PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-%E5%8D%87%E7%BA%A7-python-%E7%89%88%E6%9C%AC"><span class="toc-text">Ubuntu 升级 python 版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="toc-text">注意：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-PX4-v1-10-0-%E7%89%88%E6%9C%AC%E5%9C%A8%E7%BC%96%E8%AF%91%E6%97%B6%E9%9C%80%E8%A6%81%E5%8D%87%E7%BA%A7python%E7%89%88%E6%9C%AC%E6%89%8D%E8%83%BD%E7%BC%96%E8%AF%91%E6%88%90%E5%8A%9F"><span class="toc-text">1.PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-python%E7%89%88%E6%9C%AC%E5%9C%A8%E5%8D%87%E7%BA%A7%E4%B9%8B%E5%90%8E%E5%90%AF%E5%8A%A8roscore%E6%8A%A5%E9%94%99"><span class="toc-text">2.python版本在升级之后启动roscore报错</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -448,7 +448,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Ubuntu-升级-python-版本"><a href="#Ubuntu-升级-python-版本" class="headerlink" title="Ubuntu 升级 python 版本"></a>Ubuntu 升级 python 版本</h2><h3 id="PX4-v1-10-0-版本在编译时需要升级python版本才能编译成功"><a href="#PX4-v1-10-0-版本在编译时需要升级python版本才能编译成功" class="headerlink" title="PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功"></a>PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/caokun_8341/article/details/91380668">参考</a></p>
+        <h2 id="Ubuntu-升级-python-版本"><a href="#Ubuntu-升级-python-版本" class="headerlink" title="Ubuntu 升级 python 版本"></a>Ubuntu 升级 python 版本</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/caokun_8341/article/details/91380668">参考</a></p>
 <p>Ubuntu 默认安装了python2.7</p>
 <p>输入命令<code>python</code>，可以查看当前python版本</p>
 <p><code>Ctrl+D</code>退出，pyhton命令行</p>
@@ -471,6 +471,14 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
 </code></pre>
 <p>再输入<code>python</code>查看python版本</p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><h3 id="1-PX4-v1-10-0-版本在编译时需要升级python版本才能编译成功"><a href="#1-PX4-v1-10-0-版本在编译时需要升级python版本才能编译成功" class="headerlink" title="1.PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功"></a>1.PX4 v1.10.0 版本在编译时需要升级python版本才能编译成功</h3><h3 id="2-python版本在升级之后启动roscore报错"><a href="#2-python版本在升级之后启动roscore报错" class="headerlink" title="2.python版本在升级之后启动roscore报错"></a>2.python版本在升级之后启动roscore报错</h3><p>roscore提示“ModuleNotFoundError: No module named ‘defusedxml‘”</p>
+<p>错误原因是python连接到了python3.x上了，要想正确使用ros, python应该连接到python2.7上，解决步骤如下。</p>
+<p>第一步：执行：<code>ls -n /usr/bin/python</code></p>
+<p>发现python软链接到了python3.7</p>
+<p>第二步删除软链接：<code>sudo rm -rf /usr/bin/python</code></p>
+<p>第三步：然后再重新建立到python2.7的软链接：</p>
+<p><code>sudo ln -s /usr/bin/python2.7 /usr/bin/python</code></p>
+<p>第四步：问题解决。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1069983344@qq.com </span>
